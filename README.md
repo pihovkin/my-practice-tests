@@ -15,20 +15,21 @@ Personal QA automation practice project built with **Playwright + TypeScript**.
 
 ### UI Tests (`the-internet.herokuapp.com`)
 
-| File | What's tested |
-|---|---|
-| `login.spec.ts` | Login, wrong credentials, logout, checkboxes, dropdown |
-| `drag-and-drop.spec.ts` | Drag and drop interaction |
-| `file-upload.spec.ts` | File upload via input |
-| `javascript-alerts.spec.ts` | JS Alert, Confirm (accept/dismiss), Prompt |
-| `hovers.spec.ts` | Hover on elements, loop through figures |
-| `dynamic-loading.spec.ts` | Waiting for hidden/dynamic elements (Example 1 & 2) |
-| `tables.spec.ts` | Row count, text search, filter by cell value |
+| File                        | What's tested                                          |
+| --------------------------- | ------------------------------------------------------ |
+| `login.spec.ts`             | Login, wrong credentials, logout, checkboxes, dropdown |
+| `drag-and-drop.spec.ts`     | Drag and drop interaction                              |
+| `file-upload.spec.ts`       | File upload via input                                  |
+| `javascript-alerts.spec.ts` | JS Alert, Confirm (accept/dismiss), Prompt             |
+| `hovers.spec.ts`            | Hover on elements, loop through figures                |
+| `dynamic-loading.spec.ts`   | Waiting for hidden/dynamic elements (Example 1 & 2)    |
+| `tables.spec.ts`            | Row count, text search, filter by cell value           |
+| `login-pom.spec.ts`         | Login, failed login, logout via Page Object Model      |
 
 ### API Tests (`jsonplaceholder.typicode.com`)
 
-| File | What's tested |
-|---|---|
+| File          | What's tested                                               |
+| ------------- | ----------------------------------------------------------- |
 | `api.spec.ts` | GET, POST, PUT, PATCH, DELETE, query params, custom headers |
 
 ## Run Tests
@@ -62,8 +63,11 @@ HTML report is uploaded as an artifact and kept for 30 days.
 
 ```
 my-practice-tests/
+├── pages/
+│   └── LoginPage.ts
 ├── tests/
 │   ├── login.spec.ts
+│   ├── login-pom.spec.ts
 │   ├── api.spec.ts
 │   ├── drag-and-drop.spec.ts
 │   ├── file-upload.spec.ts
